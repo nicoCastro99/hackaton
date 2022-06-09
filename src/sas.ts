@@ -15,6 +15,10 @@ WA.onInit().then(() => {
 
     console.log(WA.state.nbUser);
 
+    WA.room.onEnterLayer('door-zone').subscribe(() => {
+        WA.state.door = true;
+    })
+
     WA.room.onEnterLayer('secret-zone').subscribe(() => {
         openSite();
     })
