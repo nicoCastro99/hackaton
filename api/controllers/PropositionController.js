@@ -67,7 +67,7 @@ exports.applyDecision = async (req, res) => {
 	const { isCorrect } = req.body;
 
 	if (isCorrect === undefined)
-		return res.status(422).json({
+		return res.status(400).json({
 			error:
 				"Le body de la requete doit contenir un clé 'isCorrect' avec une valeur true ou false",
 		});
