@@ -6,21 +6,21 @@ let websiteSecret: any = undefined;
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    WA.state.nbUser = 0;
-
-    const countUser = WA.state.nbUser;
-    if (typeof countUser === "number") {
-        WA.state.nbUser = countUser + 1;
-    }
-
-    console.log(WA.state.nbUser);
-
     WA.room.onEnterLayer('door-zone').subscribe(() => {
-        WA.state.door = true;
+        if (WA.player.tags.includes('validated')) {
+            WA.state.door = true;
+        } else {
+            WA.controls.disablePlayerControls();
+            WA.player.moveTo(500, 350, 10);
+            setTimeout(() => {
+                WA.controls.restorePlayerControls();
+            }, 1000)
+        }
     })
 
     WA.room.onEnterLayer('secret-zone').subscribe(() => {
         openSite();
+        WA.player.tags.push('validated');
     })
 
     WA.room.onLeaveLayer('secret-zone').subscribe(() => {
