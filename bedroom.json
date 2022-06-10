@@ -64,7 +64,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"public\/dodo.mp3"
+                 "value":"dodo.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,

@@ -102,7 +102,7 @@
                 {
                  "name":"playAudio",
                  "type":"string",
-                 "value":"public\/welcome.mp3"
+                 "value":"welcome.mp3"
                 }],
          "type":"tilelayer",
          "visible":true,
