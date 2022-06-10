@@ -54,7 +54,7 @@
          "width":40,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -113,7 +113,7 @@
          "width":40,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "data":[0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -166,7 +166,7 @@
          "width":40,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -217,12 +217,12 @@
                  "name":"jitsiRoom",
                  "type":"string",
                  "value":"ChillZoneOrganisation"
-                }, 
+                },
                 {
                  "name":"jitsiTrigger",
                  "type":"string",
                  "value":"onaction"
-                }, 
+                },
                 {
                  "name":"jitsiTriggerMessage",
                  "type":"string",
@@ -233,7 +233,7 @@
          "width":40,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "data":[2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2509, 2509, 2509, 2509, 2509, 2509, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458,
             2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2509, 2509, 2509, 2509, 2509, 2509, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458, 2458,
@@ -284,7 +284,7 @@
          "width":40,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -337,7 +337,7 @@
          "width":40,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2558, 2559, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2562, 2563, 2563, 2563, 2563, 2563, 2563, 2564, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -388,7 +388,7 @@
          "width":40,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "data":[0, 2169, 2170, 0, 2308, 2309, 0, 2167, 2168, 2308, 2309, 2308, 2309, 2167, 2168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 2194, 2195, 0, 0, 0, 0, 2192, 2193, 0, 0, 0, 0, 2192, 2193, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -439,7 +439,7 @@
          "width":40,
          "x":0,
          "y":0
-        }, 
+        },
         {
          "draworder":"topdown",
          "id":2,
@@ -470,31 +470,31 @@
          "name":"mapCopyright",
          "type":"string",
          "value":"Credits: Valdo Romao https:\/\/www.linkedin.com\/in\/valdo-romao\/ \nLicense: CC-BY-SA 3.0 (http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/)"
-        }, 
+        },
         {
          "name":"mapDescription",
          "type":"string",
          "value":"A perfect virtual office to get started with WorkAdventure!"
-        }, 
+        },
         {
          "name":"mapImage",
          "type":"string",
          "value":"map.png"
-        }, 
+        },
         {
          "name":"mapLink",
          "type":"string",
          "value":"https:\/\/thecodingmachine.github.io\/workadventure-map-starter-kit\/map.json"
-        }, 
+        },
         {
          "name":"mapName",
          "type":"string",
          "value":"Office"
-        }, 
+        },
         {
          "name":"script",
          "type":"string",
-         "value":"src\/main.ts"
+         "value":"src\/labyrinthe.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.8.5",
@@ -522,7 +522,7 @@
                         }]
                 }],
          "tilewidth":32
-        }, 
+        },
         {
          "columns":12,
          "firstgid":13,
@@ -535,7 +535,7 @@
          "tilecount":96,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "columns":10,
          "firstgid":109,
@@ -548,7 +548,7 @@
          "tilecount":110,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "columns":12,
          "firstgid":219,
@@ -561,7 +561,7 @@
          "tilecount":156,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "columns":25,
          "firstgid":375,
@@ -574,7 +574,7 @@
          "tilecount":1000,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "columns":13,
          "firstgid":1375,
@@ -587,7 +587,7 @@
          "tilecount":182,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "columns":10,
          "firstgid":1557,
@@ -608,7 +608,7 @@
                          "type":"bool",
                          "value":false
                         }]
-                }, 
+                },
                 {
                  "id":1,
                  "properties":[
@@ -617,7 +617,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
                 {
                  "id":2,
                  "properties":[
@@ -626,7 +626,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
                 {
                  "id":3,
                  "properties":[
@@ -635,7 +635,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
                 {
                  "id":10,
                  "properties":[
@@ -644,7 +644,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
                 {
                  "id":11,
                  "properties":[
@@ -653,7 +653,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
                 {
                  "id":12,
                  "properties":[
@@ -662,7 +662,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
                 {
                  "id":13,
                  "properties":[
@@ -671,7 +671,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
                 {
                  "id":20,
                  "properties":[
@@ -680,7 +680,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
                 {
                  "id":21,
                  "properties":[
@@ -689,7 +689,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
                 {
                  "id":22,
                  "properties":[
@@ -698,7 +698,7 @@
                          "type":"bool",
                          "value":true
                         }]
-                }, 
+                },
                 {
                  "id":23,
                  "properties":[
@@ -709,7 +709,7 @@
                         }]
                 }],
          "tilewidth":32
-        }, 
+        },
         {
          "columns":6,
          "firstgid":1827,
@@ -722,7 +722,7 @@
          "tilecount":6,
          "tileheight":32,
          "tilewidth":32
-        }, 
+        },
         {
          "columns":25,
          "firstgid":1833,
