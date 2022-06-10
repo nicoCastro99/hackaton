@@ -4,21 +4,15 @@ import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 console.log('Script started successfully');
 
-
 // Waiting for the API to be ready
 WA.onInit().then(() => {
-    console.log('Scripting API ready');
-    console.log('Player tags: ',WA.player.tags)
-
-
     WA.room.onEnterLayer('morpionZone').subscribe(async () => {
-        const coWebsite = await WA.nav.openCoWebSite('../snake/index.html');
+        const coWebsite = await WA.nav.openCoWebSite('https://www.wikipedia.org/');
 
         WA.room.onLeaveLayer('morpionZone').subscribe(() => {
             coWebsite.close()
         })
     })
-
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
