@@ -10,6 +10,7 @@ WA.onInit().then(() => {
 }).catch(e => console.error(e));
 
 setInterval(() => {
+    WA.camera.followPlayer(false)
     WA.camera.onCameraUpdate().subscribe(() => {
         console.log(1)
         let data = WA.player.getPosition()
@@ -17,8 +18,8 @@ setInterval(() => {
             WA.camera.set(
                 data.x,
                 data.y,
-                450,
-                200,
+                400,
+                150,
                 false,
                 false,
             )
