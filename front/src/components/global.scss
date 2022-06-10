@@ -1,0 +1,34 @@
+html {
+  background-color: white;
+}
+
+.toasts-wrapper {
+  position: fixed;
+  top: 5rem;
+  right: 1%;
+  max-width: 350px;
+  z-index: 9999;
+}
+
+.toast {
+  text-align: left;
+  padding: 0.7rem 1.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 0px;
+  animation-duration: 3s;
+  animation-name: appear;
+  animation-iteration-count: 1;
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+}

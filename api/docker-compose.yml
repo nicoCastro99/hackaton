@@ -30,7 +30,7 @@ services:
   server:
     image: node:alpine3.10
     ports:
-      - 3000:3000
+      - 3002:3000
     environment:
       PORT: 3000
       DATABASE_URL: "postgres://root:password@db:5432/secret-adventure"

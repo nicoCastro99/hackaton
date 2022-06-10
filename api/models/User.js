@@ -12,10 +12,10 @@ User.init(
 			unique: true,
 			allowNull: false,
 		},
-		roomId: {
-			type: DataTypes.STRING,
-			allowNull: false,
-		},
+		// roomId: {
+		// 	type: DataTypes.STRING,
+		// 	allowNull: false,
+		// },
 		name: {
 			type: DataTypes.STRING,
 			allowNull: false,
