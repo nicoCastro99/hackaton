@@ -7,7 +7,7 @@ console.log('Script started successfully');
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     WA.room.onEnterLayer('morpionZone').subscribe(async () => {
-        const coWebsite = await WA.nav.openCoWebSite('https://www.wikipedia.org/');
+        const coWebsite = await WA.nav.openCoWebSite('../morpions/index.html');
 
         WA.room.onLeaveLayer('morpionZone').subscribe(() => {
             coWebsite.close()
