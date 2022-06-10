@@ -8,7 +8,8 @@ User.init(
 	//Schema
 	{
 		playerId: {
-			type: DataTypes.INTEGER,
+			type: DataTypes.STRING,
+			unique: true,
 			allowNull: false,
 			unique: true,
 		},
@@ -27,8 +28,8 @@ User.init(
 		},
 		isRevealed: {
 			type: DataTypes.BOOLEAN,
-			allowNull: true,
-			defaultValue: null,
+			allowNull: false,
+			defaultValue: false,
 		},
 	},
 	{
@@ -39,14 +40,22 @@ User.init(
 );
 User.hasMany(Proposition, {
 	as: "propositionAsApplicant",
-	foreignKey: "applicantId",
+	// foreignKey: "applicantPlayerId",
 });
 
 User.hasMany(Proposition, {
 	as: "propositionAsTarget",
-	foreignKey: "targetId",
+	// foreignKey: "targetPlayerId",
 });
 
-Proposition.belongsTo(User, { as: "applicant" });
-Proposition.belongsTo(User, { as: "target" });
+Proposition.belongsTo(User, {
+	targetKey: "playerId",
+	foreignKey: "applicantPlayerId",
+	as: "applicant",
+});
+Proposition.belongsTo(User, {
+	targetKey: "playerId",
+	foreignKey: "targetPlayerId",
+	as: "target",
+});
 module.exports = User;
