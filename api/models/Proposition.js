@@ -10,7 +10,7 @@ Proposition.init(
 			type: DataTypes.STRING,
 			allowNull: true,
 		},
-		result: {
+		isCorrect: {
 			type: DataTypes.BOOLEAN,
 			allowNull: true,
 		},
