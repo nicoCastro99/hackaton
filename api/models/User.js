@@ -11,7 +11,10 @@ User.init(
 			type: DataTypes.STRING,
 			unique: true,
 			allowNull: false,
-			unique: true,
+		},
+		roomId: {
+			type: DataTypes.STRING,
+			allowNull: false,
 		},
 		name: {
 			type: DataTypes.STRING,

@@ -32,12 +32,15 @@ exports.post = async (req, res) => {
 
 	try {
 		//check if target and applicant exist
-		const [applicant, target] = await Promise.all([
+		const [applicant, target, propPending] = await Promise.all([
 			User.findOne({
 				where: { playerId: applicantPlayerId },
 			}),
 			User.findOne({
 				where: { playerId: targetPlayerId },
+			}),
+			Proposition.findOne({
+				where: { isCorrect: null },
 			}),
 		]);
 
@@ -46,7 +49,11 @@ exports.post = async (req, res) => {
 				error:
 					"One or severals playerId from target/applicant doesn't exist in table user",
 			});
-
+		if (propPending)
+			return res.status(403).json({
+				error:
+					"Création impossible, une proposition est déjà en attente de validation",
+			});
 		//check if has enought coins to buzz
 		if (applicant.coins < 40)
 			return res.status(403).json({

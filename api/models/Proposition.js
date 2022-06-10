@@ -6,6 +6,10 @@ class Proposition extends Model {}
 
 Proposition.init(
 	{
+		roomId: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
 		suggestion: {
 			type: DataTypes.STRING,
 			allowNull: true,
