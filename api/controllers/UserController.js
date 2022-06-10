@@ -33,10 +33,31 @@ exports.post = async (req, res) => {
 };
 
 exports.patch = async (req, res) => {
-	const { body } = req;
+	const { playerId } = req.params;
+	const { isRevealed, coins } = req.body;
+
+	const isIncorrecctBody = false;
+
+	if (!coins === undefined && !isRevealed === undefined)
+		return res.status(400).json({
+			error:
+				"Le body de la requete doit contenir les clés 'isCorrect' et/ou 'coins'",
+		});
+
 	try {
-		const user = await User.update(body);
-		res.status(200).json(user);
+		const user = await User.findOne({ where: { playerId } });
+		if (!user) return res.status(404).send();
+		const userUpdated = await User.update(
+			{
+				isRevealed,
+				coins,
+			},
+			{
+				where: { playerId },
+				returning: true,
+			}
+		);
+		res.status(200).json(...userUpdated[1]);
 	} catch (error) {
 		res.status(500).json(prettifyErrors(error));
 	}
