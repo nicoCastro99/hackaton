@@ -1,5 +1,20 @@
 const { prettifyErrors } = require("../lib/utils");
+const { Op } = require("sequelize");
 const User = require("../models/User");
+
+exports.getPlayers = async (req, res) => {
+	const { playerId } = req.params;
+	try {
+		const users = await User.findAll({
+			where: {
+				[Op.and]: [{ isRevealed: false }, { playerId: { [Op.not]: playerId } }],
+			},
+		});
+		res.status(200).send(users);
+	} catch (error) {
+		res.status(500).send(prettifyErrors(error));
+	}
+};
 
 exports.getAll = async (req, res) => {
 	try {
