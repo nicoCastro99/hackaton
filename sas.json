@@ -464,6 +464,18 @@
                 {
                  "height":0,
                  "id":13,
+                 "name":"closeWebsite",
+                 "point":true,
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":546.46732843298,
+                 "y":172.521599374444
+                }, 
+                {
+                 "height":0,
+                 "id":15,
                  "name":"door",
                  "point":true,
                  "properties":[
@@ -506,7 +518,7 @@
          "y":0
         }],
  "nextlayerid":60,
- "nextobjectid":15,
+ "nextobjectid":16,
  "orientation":"orthogonal",
  "properties":[
         {

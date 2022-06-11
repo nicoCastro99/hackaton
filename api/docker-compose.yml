@@ -1,0 +1,48 @@
+version: "3.4"
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_DB: secret-adventure
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
+    volumes:
+      - db-data:/var/lib/postgresql/data:rw
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: root@test.fr
+      PGADMIN_DEFAULT_PASSWORD: root
+      PGADMIN_LISTEN_PORT: 80
+    ports:
+      - "8081:80"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    links:
+      - "db:pgsql-server"
+    depends_on:
+      - db
+
+  server:
+    image: node:alpine3.10
+    ports:
+      - 3002:3000
+    environment:
+      PORT: 3000
+      DATABASE_URL: "postgres://root:password@db:5432/secret-adventure"
+      JWT_SECRET: "secret"
+      BASE_URL: "http://localhost:3000"
+    volumes:
+      - ./:/home/node/app
+    depends_on:
+      - db
+    working_dir: /home/node/app
+    command: sh -c "npm install --no-update-notifier; npm run start --no-update-notifier"
+
+volumes:
+  db-data: {}
+  pgadmin-data: {}

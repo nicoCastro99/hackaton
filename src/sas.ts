@@ -6,6 +6,8 @@ let websiteSecret: any = undefined;
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
+    WA.state.closeWebsite = false;
+
     WA.room.onEnterLayer('door-zone').subscribe(() => {
         if (WA.player.tags.includes('validated')) {
             WA.state.door = true;
@@ -20,12 +22,18 @@ WA.onInit().then(() => {
 
     WA.room.onEnterLayer('secret-zone').subscribe(() => {
         openSite();
-        WA.player.tags.push('validated');
     })
 
     WA.room.onLeaveLayer('secret-zone').subscribe(() => {
         closeSite();
     })
+
+    WA.state.onVariableChange('closeWebsite').subscribe(() => {
+        if (WA.state.closeWebsite === true) {
+            closeSite();
+            WA.player.tags.push('validated');
+        }
+    });
 
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
@@ -36,7 +44,7 @@ WA.onInit().then(() => {
 
 const openSite = async () => {
     websiteSecret = await WA.ui.website.open({
-        url: "https://wikipedia.org",
+        url: "http://localhost:3000/register",
         position: {
             vertical: "middle",
             horizontal: "middle",
@@ -45,6 +53,7 @@ const openSite = async () => {
             height: "50vh",
             width: "50vw",
         },
+        allowApi: true
     });
 }
 
