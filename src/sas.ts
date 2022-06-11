@@ -8,9 +8,9 @@ let websiteSecret: any = undefined;
 // Waiting for the API to be ready
 WA.onInit().then(() => {
     const userService = new UserService();
-    userService.getAll().then((users) => {
+    userService.getAll().then((users: any) => {
         console.log(users)
-      }).catch((err) => {
+      }).catch((err: any) => {
           console.log(err)
       })
     WA.state.closeWebsite = false;
@@ -51,7 +51,7 @@ WA.onInit().then(() => {
 
 const openSite = async () => {
     websiteSecret = await WA.ui.website.open({
-        url: "http://localhost:3001/register",
+        url: "https://hackaton-app.ncastro.fr/register",
         position: {
             vertical: "middle",
             horizontal: "middle",

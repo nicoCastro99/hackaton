@@ -1,8 +1,15 @@
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 import MissionService from "./services/mission-services";
 
+let currentPopup: any = undefined;
+
 // Waiting for the API to be ready
 WA.onInit().then(() => {
+    WA.room.onEnterLayer('zoneCode').subscribe(() => {
+        currentPopup = WA.ui.openPopup("code",". . . = Canards | Transats | Arbres",[]);
+    })
+
+    WA.room.onLeaveLayer('zoneCode').subscribe(closePopUp)
     // The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure
     bootstrapExtra().then(() => {
         console.log('Scripting API Extra ready');
@@ -53,6 +60,12 @@ const missionService = new MissionService();
 
 });
 
+function closePopUp(){
+    if (currentPopup !== undefined) {
+        currentPopup.close();
+        currentPopup = undefined;
+    }
+}
 
 // Close the popup when we leave the zone.
 /*WA.room.onLeaveLayer("myZone").subscribe(() => {

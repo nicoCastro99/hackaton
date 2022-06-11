@@ -45,7 +45,7 @@ WA.onInit().then(() => {
 
 const openSite = async () => {
     websiteSecret = await WA.ui.website.open({
-        url: "http://localhost:3000/reveal",
+        url: "https://hackaton-app.ncastro.fr/reveal",
         position: {
             vertical: "middle",
             horizontal: "middle",
