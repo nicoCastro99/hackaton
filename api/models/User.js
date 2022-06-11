@@ -37,8 +37,7 @@ User.init(
 	},
 	{
 		sequelize: connection,
-		modelName: "User",
-		paranoid: true,
+		modelName: "User"
 	}
 );
 User.hasMany(Proposition, {
