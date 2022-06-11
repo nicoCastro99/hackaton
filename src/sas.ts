@@ -1,11 +1,18 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
+import UserService from "./services/user-service";
 
 let websiteSecret: any = undefined;
 
 // Waiting for the API to be ready
 WA.onInit().then(() => {
+    const userService = new UserService();
+    userService.getAll().then((users) => {
+        console.log(users)
+      }).catch((err) => {
+          console.log(err)
+      })
     WA.state.closeWebsite = false;
 
     WA.room.onEnterLayer('door-zone').subscribe(() => {
