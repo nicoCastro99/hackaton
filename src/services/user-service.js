@@ -6,6 +6,6 @@ export default class UserService {
 		return axios.get(`${getBaseUrl()}users`).then(({ data }) => data);
 	}
   assignPoints(playerId, coins) {
-		return axios.get(`${getBaseUrl()}users/assignPoints/${playerId}`, {"coins": coins}).then(({ data }) => data);
+		return axios.put(`${getBaseUrl()}users/assignPoints/${playerId}`, {"coins": coins}).then(({ data }) => data);
 	}
 }

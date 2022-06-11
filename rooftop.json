@@ -322,6 +322,29 @@
                  "width":150,
                  "x":248.61,
                  "y":33.5296957991309
+                }, 
+                {
+                 "height":0,
+                 "id":19,
+                 "name":"isFinded",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"string",
+                         "value":"0"
+                        }, 
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":326.914534041526,
+                 "y":73.0468372766779
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -462,7 +485,7 @@
          "y":0
         }],
  "nextlayerid":58,
- "nextobjectid":19,
+ "nextobjectid":22,
  "orientation":"orthogonal",
  "properties":[
         {
