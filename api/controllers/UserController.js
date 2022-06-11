@@ -77,3 +77,33 @@ exports.patch = async (req, res) => {
 		res.status(500).json(prettifyErrors(error));
 	}
 };
+
+exports.assignPoints = async (req, res) => {
+	const { playerId } = req.params;
+	const { coins } = req.body;
+	console.log(playerId)
+	if (coins === undefined)
+		return res.status(400).json({
+			error:
+				"Le body de la requete doit contenir la clé 'coins'",
+		});
+
+	try {
+		const user = await User.findOne({ where: { playerId } });
+		console.log(user.coins + coins)
+		const total = user.coins + coins;
+		if (!user) return res.status(404).send();
+		const userUpdated = await User.update(
+			{
+				"coins": total
+			},
+			{
+				where: { playerId },
+				returning: true,
+			}
+		);
+		res.status(200).json(...userUpdated[1]);
+	} catch (error) {
+		res.status(500).json(prettifyErrors(error));
+	}
+};
