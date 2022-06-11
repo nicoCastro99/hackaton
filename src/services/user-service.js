@@ -5,4 +5,7 @@ export default class UserService {
 	getAll() {
 		return axios.get(`${getBaseUrl()}users`).then(({ data }) => data);
 	}
+  assignPoints(playerId, coins) {
+		return axios.get(`${getBaseUrl()}users/assignPoints/${playerId}`, {"coins": coins}).then(({ data }) => data);
+	}
 }
