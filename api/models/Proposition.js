@@ -21,8 +21,7 @@ Proposition.init(
 	},
 	{
 		sequelize: connection,
-		modelName: "Proposition",
-		paranoid: true,
+		modelName: "Proposition"
 	}
 	//applicantId
 	//targetId
