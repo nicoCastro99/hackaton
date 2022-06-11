@@ -44,7 +44,7 @@ WA.onInit().then(() => {
 
 const openSite = async () => {
     websiteSecret = await WA.ui.website.open({
-        url: "http://localhost:3001/register",
+        url: "http://localhost:3000/register",
         position: {
             vertical: "middle",
             horizontal: "middle",

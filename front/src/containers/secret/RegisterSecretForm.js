@@ -12,13 +12,12 @@ const RegisterSecretForm = () => {
   const { register, control, handleSubmit, watch, formState: { errors } } = useForm();
   const [formLoading, setFormLoading] = React.useState(false);
   const addToast = useToastContext();
-  console.log(window.WA);
 
   const onSubmit = async data => {
     setFormLoading(true);
     const userService = new UserService();
     data.playerId = window.WA && window.WA.player.id;
-    data.name = window.WA && window.WA.player.id;
+    data.name = window.WA && window.WA.player.name;
     await userService.post(data).then(() => {
       setFormLoading(false);
       addToast("Votre secret a bien été enregistré", "success");

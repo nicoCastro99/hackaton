@@ -14,7 +14,6 @@ const AccusedSecretForm = () => {
   React.useEffect(() => {
     propositionService.getLast().then((proposition) => {
       setProposition(proposition);
-      console.log(proposition)
     });
   }, []);
 

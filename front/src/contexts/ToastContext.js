@@ -11,7 +11,7 @@ export function ToastContextProvider({ children }) {
 		if (toasts.length > 0) {
 			const timer = setTimeout(
 				() => setToasts((toasts) => toasts.slice(1)),
-				30000
+				3000
 			);
 			return () => clearTimeout(timer);
 		}
