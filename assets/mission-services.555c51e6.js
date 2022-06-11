@@ -1,1 +1,0 @@
-import{a as i,g as n}from"./settings-service.24687b8f.js";class m{addMission(s,e,t){return i.post(`${n()}missions/`,{name:s,state:e,reward:t}).then(({data:a})=>a)}updateMission(s,e){return i.put(`${n()}missions/${s}`,{state:e}).then(({data:t})=>t)}getMission(s){return i.get(`${n()}missions/${s}`).then(({data:e})=>e)}}export{m as M};
